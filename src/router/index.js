@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import index from '@/components/index'
-import about from '@/components/about'
+import topic from '@/components/topic'
 import user from '@/components/user'
 
 Vue.use(Router)
@@ -15,14 +15,22 @@ export default new Router({
       component: index
     },
     {
-      path: '/about',
-      name: 'about',
-      component: about
+      path: '/topic/:id',
+      name: 'topic',
+      component: topic
+    },
+    {
+      path: '/user/:id',
+      name: 'user',
+      component: user
     },
     {
       path: '/user',
-      name: 'user',
-      component: user
+      redirect: '/'
+    },
+    {
+      path: '/topic',
+      redirect: '/'
     }
   ]
 })

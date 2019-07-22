@@ -1,27 +1,31 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <router-link to='/' style="margin-right: 20px">index</router-link>
-    <router-link to='/about' style="margin-right: 20px">about</router-link>
-    <router-link to='/user' style="margin-right: 20px">user</router-link>
-
-    <router-view/>
+      <Header/>
+    <div class="main"> <router-view/></div>
   </div>
 </template>
 
 <script>
+import Header from '@/components/header.vue'
 export default {
-  name: 'App'
+  name: 'App',
+  components: {
+    Header
+  }
 }
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  #app {
+    font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB","Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: rgba(0, 0, 0, 0.65);
+    font-size: 14px;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+  }
 </style>
