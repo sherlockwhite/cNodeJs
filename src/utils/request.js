@@ -46,7 +46,7 @@ service.interceptors.request.use(
 service.interceptors.response.use(
   response => {
     closeLoading()
-    return response
+    return response.data
   },
   err => {
     closeLoading()

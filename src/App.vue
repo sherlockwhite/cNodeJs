@@ -1,16 +1,16 @@
 <template>
   <div id="app">
-      <Header/>
+      <Headers/>
     <div class="main"> <router-view/></div>
   </div>
 </template>
 
 <script>
-import Header from '@/components/header.vue'
+import Headers from '@/components/header.vue'
 export default {
   name: 'App',
   components: {
-    Header
+    Headers
   }
 }
 </script>
@@ -23,9 +23,13 @@ export default {
     color: rgba(0, 0, 0, 0.65);
     font-size: 14px;
   }
-
   * {
     margin: 0;
     padding: 0;
+  }
+  .main {
+    margin:auto;
+    margin-top: 40px; 
+    width:1200px;
   }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <div class="header">
+  <div class="headers">
     <div class="info">
       <a href="/"><img :src="require('@/assets/img/cnodejs.svg')"/></a>
     </div>
@@ -8,12 +8,12 @@
 </template>
 <script>
 export default {
-  name: 'header'
+  name: 'headers'
 
 }
 </script>
 <style scoped lang="scss">
-  .header{
+  .headers{
     width:100%;
     height:50px;
     background-color: #444444;

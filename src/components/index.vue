@@ -1,9 +1,7 @@
 <template>
 <div class="home">
   <el-tabs v-model="tab" @tab-click="change">
-    <el-tab-pane label="全部" name="all">
-      <Content :list='list' />
-    </el-tab-pane>
+    <el-tab-pane label="全部" name="all"><Content :list='list' /></el-tab-pane>
     <el-tab-pane label="精华" name="good"><Content :list='list' /></el-tab-pane>
     <el-tab-pane label="分享" name="share"><Content :list='list' /></el-tab-pane>
     <el-tab-pane label="问答" name="ask"><Content :list='list' /></el-tab-pane>
@@ -49,6 +47,7 @@ export default {
         tab: this.tab
       }).then(res => {
         this.list = res.data
+        console.log(this.list)
         this.limit = this.limit + 10
         const store = res.data
         this.store[this.tab] = {
@@ -63,7 +62,7 @@ export default {
   }
 }
 </script>
-<style scoped>
+<style scoped lang="scss">
 .home{
   margin: auto;
   width: 75%;
