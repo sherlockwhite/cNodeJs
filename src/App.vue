@@ -29,7 +29,7 @@ export default {
   }
   .main {
     margin:auto;
-    margin-top: 40px; 
+    margin-top: 40px;
     width:1200px;
   }
 </style>

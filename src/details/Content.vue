@@ -16,12 +16,12 @@
 <script>
 export default {
   name: 'Content',
-  props:{
-  'list':Array
-},
+  props: {
+    'list': Array
+  },
   data () {
     return {
-      article: [],
+      article: []
     }
   }
 }
@@ -63,19 +63,5 @@ export default {
     width: 70px;
     text-align: right;
   }
-  // .title{
-  //     width: 60%;
-  //     overflow: hidden;
-  //     text-overflow:ellipsis;
-  //     white-space: nowrap;
-  //     margin: 0;
-  //     text-decoration:none;
-  //     color:#42b983;
-  //     font-weight: 600;
-  //   }
-  //   span.time{
-  //     width:70px;
-  //     text-align: right;
-  //   }
 }
 </style>

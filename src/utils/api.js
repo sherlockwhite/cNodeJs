@@ -12,7 +12,7 @@ export const getTopic = data => {
 export const getDetail = id => {
   return request({
     // eslint-disable-next-line no-template-curly-in-string
-    url: '/topic/${id}',
+    url: `/topic/${id}`,
     methods: 'get'
   })
 }
@@ -20,7 +20,7 @@ export const getDetail = id => {
 export const getUser = id => {
   return request({
     // eslint-disable-next-line no-template-curly-in-string
-    url: '/user/${id}',
+    url: `/user/${id}`,
     methods: 'get'
   })
 }
