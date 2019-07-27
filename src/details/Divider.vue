@@ -12,5 +12,10 @@ export default {
   height:1px;
   width:100%;
   font-size:14px;
+  line-height:1.5;
+  color: rgba(0, 0, 0, 0.65);
+  background: #e8e8e8;
+  box-sizing: border-box;
+  list-style: none;
 }
 </style>

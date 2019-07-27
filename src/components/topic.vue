@@ -1,7 +1,7 @@
 <template>
 <div class="topic">
+
   <div class="left">
-    <div class="title">
       <div class="title" v-html="topic.title"/>
       <div class='info'>
         <span>发布于&nbsp;{{$moment(topic.create_at,'YYYY-MM-DD').startOf('day').fromNow()}}&nbsp;•&nbsp;</span>
@@ -10,18 +10,23 @@
         <span>{{$tab[topic.tab] && $tab[topic.tab].name}}</span>
       </div>
       <Divider/>
+      <div class="content" v-html="topic.content"/>
+      <Reply :data='topic.replies'/>
     </div>
-  </div>
+
   <div class="right"></div>
+
 </div>
 </template>
 <script>
 import Divider from '@/details/Divider'
+import Reply from '@/details/Reply'
 import {getDetail} from '@/utils/api'
 export default {
   name: 'topic',
   components: {
-    Divider
+    Divider,
+    Reply
   },
   data () {
     return {
