@@ -20,9 +20,11 @@
             </span>
         </p>
         <span class="thumbs">
-          <img v-if="reply.ups.length" :src="require('@/asserts/img/thumbs-up.svg')"
+          <img v-if="reply.ups.length" :src="require('@/assets/img/thumbs-up.svg')" alt="点赞"/>
+          {{reply.ups.length!=0?reply.ups.length:''}}
         </span>
       </div>
+      <p v-html="reply.content" />
     </div>
     </div>
   </div>
@@ -35,6 +37,57 @@ export default {
 </script>
 <style lang="scss" scoped>
 .reply{
+  width: 100%;
+  img {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    margin-right: 15px;
+  }
+  > div{
+    display: flex;
+    border: 1px solid #ebedf0;
+    border-bottom-width: 0;
+    padding: 10px,20px;
+    //color: rgba(0,0,0,0.65)
+    > div{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      p {
+        margin: 0;
+        width: 100%;
+        /deep/ img {
+          width: 100%;
+        }
+      }
+      .info {
+        width:100%;
+        display:flex;
+        align-items: center;
+        justify-content: space-between;
+        .thumbs{
+          font-size: 12px;
+          display: flex;
+          align-items: center;
+          img {
+            width: 12px;
+            height: 15px;
+            margin-right: 5px;
+            transform: rotate(-15deg);
+          }
+        }
+      }
+    }
+  }
+  > div fist-child{
+    color: rgba(0,0,0,0.85);
+    font-weight: bold;
+  }
+  > div last-child{
+    border-bottom: 1px solid #ebedf0;
+  }
 
 }
 </style>
