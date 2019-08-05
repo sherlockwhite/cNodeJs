@@ -86,7 +86,7 @@ export default {
     font-weight: bold;
   }
   > div last-child{
-    border-bottom: 1px solid #ebedf0;
+    border-bottom: 1px solid #256edb;
   }
 
 }
